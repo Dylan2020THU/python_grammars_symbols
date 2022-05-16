@@ -26,3 +26,4 @@ def add(a, b):
 id1 = read_array.remote(file=[1, 2, 3])
 id2 = read_array.remote([4, 5, 6])
 id3 = add.remote(id1, id2)  # this will be visited after id1 and id2
+ray.get(id3) # To fetch the output
